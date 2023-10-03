@@ -8,6 +8,7 @@ const CreateTextMessage = async(req, res) => {
     await TextMessage.create({
         message: req.body.message,
         dataSent: req.body.dataSent,
+        customerId: req.body.customerId,
     });
 
     res.status(200).send("Successfully saved.");

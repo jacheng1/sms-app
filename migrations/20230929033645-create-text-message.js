@@ -15,6 +15,9 @@ module.exports = {
       dataSent: {
         type: Sequelize.STRING
       },
+      customerId: {
+        type: Sequelize.STRING
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

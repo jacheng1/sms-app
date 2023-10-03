@@ -15,7 +15,8 @@ module.exports = (sequelize, DataTypes) => {
   }
   TextMessage.init({
     message: DataTypes.STRING,
-    dataSent: DataTypes.STRING
+    dataSent: DataTypes.STRING,
+    customerId: DataTypes.STRING,
   }, {
     sequelize,
     modelName: 'TextMessage',

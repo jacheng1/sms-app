@@ -6,7 +6,8 @@ const CreateCustomer = async(req, res) => {
     console.log(`Logging request: ${req.body}`+JSON.stringify(req.body));
 
     await Customers.create({
-        name: req.body.name,
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
         email: req.body.email,
         phoneNumber: req.body.phoneNumber,
     });
