@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
-const CreateCustomerMessage = require("../controllers/customerMessage");
+const { CreateCustomerMessage, getCustomerMessages } = require("../controllers/customerMessage");
+const CreateCustomer = require("../controllers/customers");
+const CreateTextMessage = require("../controllers/textMessage");
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -9,5 +11,14 @@ router.get('/', function(req, res, next) {
 
 /* POST create customer and text */
 router.post("/create-customer-text", CreateCustomerMessage);
+
+/* GET create customer text */
+router.get("/customer-texts", getCustomerMessages);
+
+/* POST create customer */
+router.post("/create-customer", CreateCustomer);
+
+/* POST create text message */
+router.post("/create-text-message", CreateTextMessage);
 
 module.exports = router;
